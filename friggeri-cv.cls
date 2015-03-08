@@ -122,38 +122,6 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 %%%%%%%%%%%%%
 \RequirePackage{parskip}
 
-%\newcounter{colorCounter}
-%\def\@sectioncolor#1#2#3{%
-%  {%
-%    \color{%
-%      \ifcase\value{colorCounter}%
-%        blue\or%
-%        red\or%
-%        orange\or%
-%        green\or%
-%        purple\else%
-%        headercolor\fi%
-%    } #1#2#3%
-%  }%
-%  \stepcounter{colorCounter}%
-%}
-
-%\newcounter{colorCounter}
-%\def\@sectioncolor#1#2#3{%
-%  {%
-%    \color{%
-%      \ifcase\value{colorCounter}%
-%        pblue\or%
-%        pblue\or%
-%        pblue\or%
-%        pblue\or%
-%        pblue\else%
-%        pblue\fi%
-%    } #1#2#3%
-%  }%
-%  \stepcounter{colorCounter}%
-%}
-
 \renewcommand{\section}[1]{
   \par\vspace{\parskip}
   {%
