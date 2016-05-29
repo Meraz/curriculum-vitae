@@ -1,118 +1,164 @@
-%!TEX TS-program = xelatex
-\documentclass[]{friggeri-cv}
-\usepackage{afterpage}
+\documentclass[a4paper,10pt]{article}
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+%Setup hyperref package, and colours for links
 \usepackage{hyperref}
-\usepackage{color}
-\usepackage{xcolor}
-\hypersetup{
-    pdftitle={},
-    pdfauthor={},
-    pdfsubject={},
-    pdfkeywords={},
-    colorlinks=false,       % no lik border color
-   allbordercolors=white    % white border color for all
-}
-\addbibresource{bibliography.bib}
-\RequirePackage{xcolor}
-\definecolor{pblue}{HTML}{0395DE}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
 \begin{document}
-\header{Rasmus}{Tilljander}
-      {Software Engineer}
-      
-% Fake text to add separator      
-\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
-.....
-}}
 
-% In the aside, each new line forces a line break
-\begin{aside}
-\vspace{3.1cm}
- %\section{Date of birth}
- %   1991-07-26
- %   ~
- % \section{Address}
-  %  Polhemsgatan 19A
- %   37140, Blekinge Sweden
- %   ~
- % \section{Tel}
- %   +46 760066242
- %   ~
-%  \section{Mail}
-%    \href{mailto:tilljander.rasmus@gmail.com}{\textbf{tilljander.rasmus@}\\gmail.com}
-%    ~
-  \section{Programming}
-    \includegraphics[width=0.18\paperwidth]{img/programming.pdf}
- %    \vspace{0.3cm}
-    ~
-    ~
-     \section{Public Git}
-    \href{https://github.com/Meraz}{github.com/Meraz}
-    ~
-    ~
-  \section{OS Preference}
-    \textbf{GNU/Linux}\includegraphics[scale=0.40]{img/5stars.png}
-    \textbf{Windows}\includegraphics[scale=0.40]{img/4stars.png}
-    \textbf{Unix}\includegraphics[scale=0.40]{img/3stars.png}
-    \textbf{MacOS}\includegraphics[scale=0.40]{img/1stars.png}
-    ~
-    ~
- % \section{Personal Skills}
- %   \includegraphics[scale=0.25]{img/italia.png}
- %   \includegraphics[scale=0.62]{img/personal.png}
- \section{Language}
-    \textbf{Swedish}\includegraphics[scale=0.40]{img/5stars.png}
-    \textbf{English}\includegraphics[scale=0.40]{img/4stars.png}
- ~
- ~
-\end{aside}
-\vspace{0.5cm}
-\section{Personal Information}
-\textbf{Date of birth} 1991-07-26
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
 
-\textbf{Phone} +46 760 066 242
+\pagestyle{empty} % non-numbered pages
 
-\textbf{Email} tilljander.rasmus@gmail.com
+\font\fb=''[cmr10]'' %for use with \LaTeX command
 
-\textbf{Adress} Polhemsgatan 19A, 371 40, Blekinge, Sweden
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Rasmus \textsc{Tilljander}
+	}\bigskip\par}
 
-\vspace{0.7cm}
-\section{Experience}
-\begin{entrylist}
-  \entry
-    {09/14 - 12/14}
-    {Consultant, Software Engineer (4 months)}
-    {HiQ, Karlskrona, Sweden}
-    {Project based employment at HiQ Karlskrona AB in which I worked as a software developer at Ericsson AB in Karlskrona. The project included working with Ericssons internal systems, vaadin, scala and java.\\}
-  \entry
-    {11/11 - 09/01}
-    {IT-Helpdesk (2 years, 1 month)}
-    {Blekinge Institute of Technology, Sweden}
-    {I answered questions and solved problems regarding the IT-services provided by Blekinge Institute of Technology. The work included working with services as the PayEx payment system and general problem solving with the printing system accessible by students.}
-\end{entrylist}
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
 
-\vspace{0.7cm}
+\begin{tabular}{rl}
+    \textsc{Date of Birth:} &  1991-07-26   \\
+    \textsc{Address:}   & Valhallavägen 4, 37140 , Karlskrona, Sweden \\
+    \textsc{Languages:}  & Swedish (Native), English (Fluent) \\
+    \textsc{Phone:}     & +46 76 00 66 242\\
+    \textsc{email:}     & \href{mailto:tilljander.rasmus@gmail.com}{tilljander.rasmus@gmail.com}\\
+    \textsc{linkedin:}  & \url{https://se.linkedin.com/in/rasmus-tilljander-62830052}\\
+    \textsc{Github:}  & \url{https://github.com/Meraz}
+\end{tabular}
+
+%%%
+\section{Skills}
+\begin{tabular}{rl}
+Basic Knowledge:& Unix, IA-32, X86-64, CI, \textsc{sql}, {\fb \LaTeX}, Javascript, \textsc{HTML} \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+Intermediate Knowledge:& Linux, C, \textsc{cmake}, Performance, Bash, Android, Java, DirectX\\
+Advanced knowledge: &\textsc{C++}, Git, Agile Development
+\end{tabular}
+
+%%%
+\section{Work experience}
+\textbf{Consultant, Software Engineer} 2016-04-01 - Present \\
+\begin{tabular}{rl}
+Company:& HiQ \\
+Location:& Karlskrona, Sweden \\
+Description:& Full-time employment, currently at Ericsson AB continuing the\\&
+previous project that I left to finish my degree.
+\end{tabular}\\
+
+\textbf{Consultant, Software Engineer} 2015-06-01 - 2015-10-31 (5 Months)\\
+\begin{tabular}{rl}
+Company:& HiQ \\
+Location:& Karlskrona, Sweden \\
+Description:& Full-time project based employment where I worked as a software \\&
+engineer for Ericsson AB. A proof of concept were we worked with java, \\&
+vaadin, spring, tomcat, jpa, yaml, tosca, cloudify, and android development.\\
+\end{tabular}\\
+
+\textbf{Consultant, Software Engineer} 2015-09-01 - 2015-12-31 (4 Months) \\
+\begin{tabular}{rl}
+Company:& HiQ \\
+Location:& Karlskrona, Sweden \\
+Description:& Part time job at 25\%, during my studies, at HiQ Karlskrona AB in which I\\&
+worked as a software engineer at Ericsson AB in Karlskrona. The project\\&
+included working with Ericssons internal systems, vaadin, scala and java.
+\end{tabular}\\
+
+
+%%%
 \section{Education}
-\begin{entrylist}
-  \entry
-    {2010 - 2016}
-    {College}
-    {Blekinge Institute of Technology, Karlskrona, Sweden}
-    {Degee of Master of Science in Engineering: Game and Software Engineering\\
-    Title of the Thesis:\emph{ Regional time stepping with two-scale PCISPH method}\\}
-  \entry
-    {2007 - 2010}
-    {Highschool}
-    {John Bauer Gymnasiet, Halmstad, Sweden}
-    {Information Technology and Electrical Mathematics \\}
-\end{entrylist}
-}
-\\
-\begin{flushleft}
-\emph{Mars 7th, 2015}
-\end{flushleft}
-\begin{flushright}
-\emph{Rasmus Tilljander}
-\end{flushright}
+\begin{tabular}{rl}	
+ \textsc{March} 2016 & Master of Science in \textsc{Game and Software Engineering}\\ 
+& \textbf{Blekinge Institute of Technology}, Sweden\\
+& Thesis: ``Combining Regional Time Stepping With Two-Scale PCISPH Method''
+\end{tabular}
+
+%%%
+\section{Interests and Activities}
+Gamejams, Hackathons, Wargames, Programming challenges, Performance optimization, Magic the Gathering, Cooking, Computer Games
+
+
+%%%%
+%\section{Other projects}
+%
+%\textbf{Large game %development project}\\%
+%\begin{tabular}{rl}%
+%Related organization:& Blekinge Institute of Technology \\%
+%Environment:& C++ using Visual studio 2012, Cmake, Git, Wind%ows, Scrum\\%
+%Web Page:& \url{http://www.indiedb.com/games/root-force}\\\\%
+%Description:& Worked as an agile team from early design until finished product. \\ &%
+%The project was organized to simulate an environment close to \\&what could be expected when working in industry, such as\\& demonstrating %demos for teachers.
+%\end{tabular}\\
+%
+%\textbf{Master thesis}\\
+%\begin{tabular}{rl}
+%Related organization:& Blekinge Institute of Technology \\
+%Field of study:& Machine Learning\\
+%Environment:& Java using Eclipse Juno, Weka machine learning library, Git, Windows\\
+%Description:& Researched an active learning approach using transduction for
+%\end{tabular}
+%
+%
+%\newpage
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
 
 \end{document}
