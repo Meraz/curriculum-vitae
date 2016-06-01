@@ -43,6 +43,15 @@ ItalicFont = Fontin-Italic.otf
 \setlength{\TPVertModule}{\TPHorizModule}
 \textblockorigin{2mm}{0.65\paperheight}
 \setlength{\parindent}{0pt}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\newwatermark[allpages,color=red!50,angle=45,scale=1,xpos=-85,ypos=125]{DRAFT}
+
+
+
+
 
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
@@ -75,10 +84,10 @@ ItalicFont = Fontin-Italic.otf
 
 \begin{tabular}{rl}
     \textsc{Date of Birth:} &  1991-07-26   \\
-    \textsc{Address:}   & Valhallavägen 4, 37140 , Karlskrona, Sweden \\
+    \textsc{Address:}   & Valhallavägen 4B, 37140 , Karlskrona, Sweden \\
     \textsc{Languages:}  & Swedish (Native), English (Fluent) \\
     \textsc{Phone:}     & +46 76 00 66 242\\
-    \textsc{email:}     & \href{mailto:tilljander.rasmus@gmail.com}{tilljander.rasmus@gmail.com}\\
+    \textsc{email:}     & tilljander.rasmus@gmail.com\\
     \textsc{linkedin:}  & \url{https://se.linkedin.com/in/rasmus-tilljander-62830052}\\
     \textsc{Github:}  & \url{https://github.com/Meraz}
 \end{tabular}
@@ -86,8 +95,8 @@ ItalicFont = Fontin-Italic.otf
 %%%
 \section{Skills}
 \begin{tabular}{rl}
-Basic Knowledge:& Unix, IA-32, X86-64, CI, \textsc{sql}, Android, C, Bash \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
-Intermediate Knowledge:& \textsc{C++}, Git, Agile Development, Linux, \textsc{cmake}, Performance,\\&  Java, DirectX\\
+Basic Knowledge:& Unix, IA-32, X86-64, SQL, Android, C, Bash, GPGPU \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+Intermediate Knowledge:& \textsc{C++}, Git, Agile Development, Linux, CMake, Threading,\\&  Java, DirectX\\
 \end{tabular}
 
 %%%
@@ -96,8 +105,8 @@ Intermediate Knowledge:& \textsc{C++}, Git, Agile Development, Linux, \textsc{cm
 \begin{tabular}{rl}
 Company:& HiQ \\
 Location:& Karlskrona, Sweden \\
-Description:& Full-time employment, currently at Ericsson AB continuing the\\&
-previous project that I left to finish my degree.
+Description:& Full-time employment as a software engineer at Ericsson AB. This is a\\&
+continuation of the project listed below.
 \end{tabular}\\
 
 \textbf{Consultant, Software Engineer} 2015-06-01 - 2015-10-31 (5 Months)\\
@@ -105,15 +114,15 @@ previous project that I left to finish my degree.
 Company:& HiQ \\
 Location:& Karlskrona, Sweden \\
 Description:& Full-time project based employment where I worked as a software \\&
-engineer for Ericsson AB. A proof of concept were we worked with java, \\&
-vaadin, spring, tomcat, jpa, yaml, tosca, cloudify, and android development.\\
+engineer for Ericsson AB. Using Scrum we worked on a proof of concept using\\& 
+java, vaadin, spring, rest, yaml, tosca, cloudify, and android sdk and ndk.\\
 \end{tabular}\\
 
 \textbf{Consultant, Software Engineer} 2015-09-01 - 2015-12-31 (4 Months) \\
 \begin{tabular}{rl}
 Company:& HiQ \\
 Location:& Karlskrona, Sweden \\
-Description:& Part time job at 25\%, during my studies, at HiQ Karlskrona AB in which I\\&
+Description:& Part time job at 25\%, besides my studies, at HiQ Karlskrona AB in which I\\&
 worked as a software engineer at Ericsson AB in Karlskrona. The project\\&
 included working with Ericssons internal systems, vaadin, scala and java.
 \end{tabular}\\
@@ -121,11 +130,12 @@ included working with Ericssons internal systems, vaadin, scala and java.
 
 %%%
 \section{Education}
-\begin{tabular}{rl}	
- \textsc{March} 2016 & Master of Science in \textsc{Game and Software Engineering}\\ 
-& \textbf{Blekinge Institute of Technology}, Sweden\\
-& Thesis: ``Combining Regional Time Stepping With Two-Scale PCISPH Method''
-\end{tabular}
+\textbf{Blekinge Institute of Technology} 2010-09-01 - 2016-03-31 \\
+\begin{tabular}{rl}
+Degree:&  Master of Science in Game and Software Engineering\\
+Thesis:& Combining Regional Time Stepping With Two-Scale PCISPH Method \\
+Notable project:& <We built a gameengine from scratch using DirectX and C++>
+\end{tabular}\\
 
 %%%
 \section{Interests and Activities}
