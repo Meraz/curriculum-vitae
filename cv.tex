@@ -11,6 +11,8 @@
 \usepackage{titlesec}					%custom \section
 %Setup hyperref package, and colours for links
 \usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage[export]{adjustbox}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
@@ -70,34 +72,43 @@ ItalicFont = Fontin-Italic.otf
 \font\fb=''[cmr10]'' %for use with \LaTeX command
 
 %--------------------TITLE-------------
-\par{\centering
-		{\Huge Rasmus \textsc{Tilljander}
-	}\bigskip\par}
+\par{	
+    
+    \begin{wrapfigure}{!tr}{0.20\textwidth}
+    \includegraphics[scale=0.04]{Grayscale.pdf}
+    \end{wrapfigure}
+    
+    %\centering{
+    \Huge Rasmus \textsc{Tilljander}
+    %}
+	\bigskip
+\par}
+	
 
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Data
-\section{Personal Data}
+%\subsection{Personal Data}
 
+\vspace{5 mm}
 \begin{tabular}{rl}
     \textsc{Date of Birth:} &  1991-07-26   \\
     \textsc{Address:}   & Valhallavägen 4B, 37140 , Karlskrona, Sweden \\
     \textsc{Languages:}  & Swedish (Native), English (Fluent) \\
     \textsc{Phone:}     & +46 76 00 66 242\\
     \textsc{email:}     & tilljander.rasmus@gmail.com\\
-    \textsc{linkedin:}  & \url{https://se.linkedin.com/in/rasmus-tilljander-62830052}\\
-    \textsc{Github:}  & \url{https://github.com/Meraz}
+    \textsc{Github:}  & \url{https://github.com/Meraz}\\
+    \textsc{linkedin:}  & \url{https://se.linkedin.com/in/rasmus-tilljander-62830052}
 \end{tabular}
-
 %%%
 \section{Skills}
 \begin{tabular}{rl}
-Basic Knowledge:& Unix, IA-32, X86-64, SQL, Android, C, Bash, GPGPU \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+Basic Knowledge:& Unix, IA-32, X86-64, SQL, Android, C, Bash, GPGPU, Python3 \\
 Intermediate Knowledge:& \textsc{C++}, Git, Agile Development, Linux, CMake, Threading,\\&  Java, DirectX\\
 \end{tabular}
 
 %%%
 \section{Work experience}
-\textbf{Consultant, Software Engineer} 2016-04-01 - Present \\
+\textbf{Consultant, Software Developer} 2016-04-01 - Present \\
 \begin{tabular}{rl}
 Company:& HiQ \\
 Location:& Karlskrona, Sweden \\
@@ -105,16 +116,17 @@ Description:& Full-time employment as a software engineer at Ericsson AB. This i
 continuation of the project listed below.
 \end{tabular}\\
 
-\textbf{Consultant, Software Engineer} 2015-06-01 - 2015-10-31 (5 Months)\\
+\textbf{Consultant, Software Developer} 2015-06-01 - 2015-10-31 (5 Months)\\
 \begin{tabular}{rl}
 Company:& HiQ \\
 Location:& Karlskrona, Sweden \\
 Description:& Full-time project based employment where I worked as a software \\&
-engineer for Ericsson AB. Using Scrum we worked on a proof of concept using\\& 
-java, vaadin, spring, rest, yaml, tosca, cloudify, and android sdk and ndk.\\
+engineer for Ericsson AB. Using Scrum we worked on a proof of concept\\& 
+using
+java, vaadin, spring, rest, yaml, tosca, cloudify, and android sdk.\\
 \end{tabular}\\
 
-\textbf{Consultant, Software Engineer} 2015-09-01 - 2015-12-31 (4 Months) \\
+\textbf{Consultant, Software Developer} 2015-09-01 - 2015-12-31 (4 Months) \\
 \begin{tabular}{rl}
 Company:& HiQ \\
 Location:& Karlskrona, Sweden \\
@@ -130,8 +142,9 @@ included working with Ericssons internal systems, vaadin, scala and java.
 \begin{tabular}{rl}
 Degree:&  Master of Science in Game and Software Engineering\\
 Thesis:& Combining Regional Time Stepping With Two-Scale PCISPH Method \\
-Notable project:& During a project we built a game engine and associated \\
-&game from scratch in C++ using DirectX, PhysX, FMod, SDL and Winsock2.\\
+Notable project:& During a project where I acted as scrummaster, we built a game\\
+& engine and associated game from scratch in C++ using DirectX,\\
+& PhysX, FMod, SDL and Winsock.\\
 & \url{https://github.com/Meraz/doremi}
 \end{tabular}\\
 
