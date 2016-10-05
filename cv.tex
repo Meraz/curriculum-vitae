@@ -16,6 +16,12 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
+%% Page sizes
+\setlength{\textwidth}{0.85\paperwidth}
+\setlength{\textheight}{720pt}
+\setlength{\hoffset}{-50pt}
+\setlength{\voffset}{-50pt}
+
 %FONTS
 \defaultfontfeatures{Mapping=tex-text}
 %\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
@@ -50,26 +56,10 @@ ItalicFont = Fontin-Italic.otf
 %\usepackage{graphicx}
 %\usepackage{lipsum}
 %\newwatermark[allpages,color=red!50,angle=45,scale=1,xpos=-85,ypos=125]{DRAFT}
-
 %--------------------BEGIN DOCUMENT----------------------
+
 \begin{document}
-
-%WATERMARK TEST [**not part of a CV**]---------------
-%\font\wm=''Baskerville:color=787878'' at 8pt
-%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
-%{\wm 
-%	\begin{textblock}{1}(0,0)
-%		\rotatebox{-90}{\parbox{500mm}{
-%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
-%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
-%		}
-%	}
-%	\end{textblock}
-%}
-
 \pagestyle{empty} % non-numbered pages
-
-\font\fb=''[cmr10]'' %for use with \LaTeX command
 
 %--------------------TITLE-------------
 \par{	
@@ -89,8 +79,9 @@ ItalicFont = Fontin-Italic.otf
 %Section: Personal Data
 %\subsection{Personal Data}
 
-\vspace{5 mm}
+% \vspace{5 mm}
 \begin{tabular}{rl}
+    \textsc{} &    \\
     \textsc{Date of Birth:} &  1991-07-26   \\
     \textsc{Address:}   & Valhallavägen 4B, 37140 , Karlskrona, Sweden \\
     \textsc{Languages:}  & Swedish (Native), English (Fluent) \\
@@ -100,85 +91,62 @@ ItalicFont = Fontin-Italic.otf
     \textsc{linkedin:}  & \url{https://se.linkedin.com/in/rasmus-tilljander-62830052}
 \end{tabular}
 %%%
-\section{Skills}
+\section{Technical experience (1-5)}
 \begin{tabular}{rl}
-Basic Knowledge:& Unix, IA-32, X86-64, SQL, Android, C, Bash, GPGPU, Python3 \\
-Intermediate Knowledge:& \textsc{C++}, Git, Agile Development, Linux, CMake, Threading,\\&  Java, DirectX\\
+Beginners Knowledge(1):& Python3, PHP, C\#, Groovy, Lua\\
+Basic Knowledge(2):& Unix, C, X86-64, HLSL, GPGPU, Javascript, Unity, Spring Framework,\\& HTML, CSS, Scala \\
+Intermediate Knowledge(3):& Linux, Agile Development, SQL, IA-32, Gradle, CMake, Android, Threading,  DirectX, \\& Memory Management, Java, Bash\\
+Advanced Knowledge(4):& C++, Git, Game Development, Windows
 \end{tabular}
 
 %%%
 \section{Work experience}
-\textbf{Consultant, Software Developer} 2016-04-01 - Present \\
+\textbf{Contractor, Software Developer} 2016-04-01 - Present \\
 \begin{tabular}{rl}
-Company:& HiQ \\
-Location:& Karlskrona, Sweden \\
-Description:& Full-time employment as a software engineer at Ericsson AB. This is a\\&
-continuation of the project listed below.
+Company:& HiQ Karlskrona AB \\
+% Location:& Karlskrona, Sweden \\
+Technologies:&  Linux, Java8, Vaadin, SQL, Spring, REST, Yaml, Cloudify, Android development, Git, Gradle, Groovy\\
+Description:& Full-time employment where I worked as a software developer for Ericsson AB. The project is a\\&
+continuation of the project listed below. A proof of concept which explored a BSS approach for\\&
+providing Internet as a service, it were presented in Berlin at OPNFV in June 2016. I also\\&
+manage the internal IT system at HiQ Karlskrona.
 \end{tabular}\\
 
-\textbf{Consultant, Software Developer} 2015-06-01 - 2015-10-31 (5 Months)\\
+\textbf{Contractor, Software Developer} 2015-06-01 - 2015-10-31 (5 Months)\\
 \begin{tabular}{rl}
-Company:& HiQ \\
-Location:& Karlskrona, Sweden \\
-Description:& Full-time project based employment where I worked as a software \\&
-engineer for Ericsson AB. Using Scrum we worked on a proof of concept\\& 
-using
-java, vaadin, spring, rest, yaml, tosca, cloudify, and android sdk.\\
+Company:& HiQ Karlskrona AB \\
+% Location:& Karlskrona, Sweden \\
+Technologies:&  Java, Vaadin, Spring, Rest, Yaml, Cloudify, Android development, Git, Gradle, Groovy, SQL\\
+Description:& Full-time project based employment where I worked as a software engineer for Ericsson AB.\\&
+The team consisted of five individuals and for the first two months in the project I worked as\\&
+a general developer. For the rest three months I acted as both scrum master as well as a\\&
+developer within the team. We worked on a proof of concept for Ericsson which were\\& 
+presented in Barcelone at Mobile World Congress in February 2016.\\
 \end{tabular}\\
 
-\textbf{Consultant, Software Developer} 2015-09-01 - 2015-12-31 (4 Months) \\
+\textbf{Contractor, Software Developer} 2015-09-01 - 2015-12-31 (4 Months) \\
 \begin{tabular}{rl}
-Company:& HiQ \\
-Location:& Karlskrona, Sweden \\
-Description:& Part time job at 25\%, besides my studies, at HiQ Karlskrona AB in which I\\&
-worked as a software engineer at Ericsson AB in Karlskrona. The project\\&
-included working with Ericssons internal systems, vaadin, scala and java.
+Company:& HiQ Karlskrona AB \\
+Technologies:&  Java, Scala, Vaadin, Gradle, Git, Groovy, GUI, Linux\\
+% Location:& Karlskrona, Sweden \\
+Description:& Part-time employment at 25 \%, besides my studies, where I worked as a software deverloper for\\&
+Ericsson AB. The goal of the project were to rebuild an existing GUI for an internal system using\\&
+Vaadin and Scala.
 \end{tabular}\\
-
 
 %%%
 \section{Education}
 \textbf{Blekinge Institute of Technology} 2010-09-01 - 2016-03-31 \\
 \begin{tabular}{rl}
-Degree:&  Master of Science in Game and Software Engineering\\
-Thesis:& Combining Regional Time Stepping With Two-Scale PCISPH Method \\
-Notable project:& During a project where I acted as scrummaster, we built a game\\
-& engine and associated game from scratch in C++ using DirectX,\\
-& PhysX, FMod, SDL and Winsock.\\
-& \url{https://github.com/Meraz/doremi}
+Degree:&  Master of Engineering Science in Game and Software Engineering\\
+Thesis:& Combining Regional Time Stepping With Two-Scale PCISPH Method\\
+Notable project:& During a 20 week long project in school, where I acted as scrummaster, I were involved in\\&
+building a game engine and  associated game from scratch in C++ using DirectX, PhysX,\\&
+FMod, SDL and Winsock. It can be found here: \url{https://github.com/Meraz/doremi}
 \end{tabular}\\
 
 %%%
 \section{Interests and Activities}
-Gamejams, Hackathons, Wargames, Programming challenges, Performance optimization, Magic the Gathering, Cooking, Computer Games
-
-
-%%%%
-%\section{Other projects}
-%
-%\textbf{Large game %development project}\\%
-%\begin{tabular}{rl}%
-%Related organization:& Blekinge Institute of Technology \\%
-%Environment:& C++ using Visual studio 2012, Cmake, Git, Wind%ows, Scrum\\%
-%Web Page:& \url{http://www.indiedb.com/games/root-force}\\\\%
-%Description:& Worked as an agile team from early design until finished product. \\ &%
-%The project was organized to simulate an environment close to \\&what could be expected when working in industry, such as\\& demonstrating %demos for teachers.
-%\end{tabular}\\
-%
-%\textbf{Master thesis}\\
-%\begin{tabular}{rl}
-%Related organization:& Blekinge Institute of Technology \\
-%Field of study:& Machine Learning\\
-%Environment:& Java using Eclipse Juno, Weka machine learning library, Git, Windows\\
-%Description:& Researched an active learning approach using transduction for
-%\end{tabular}
-%
-%
-%\newpage
-
-%\newpage
-%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
-
-%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+Cooking, C++, Computer Games, Magic the Gathering, Gamejams, Wargames, Beer
 
 \end{document}
