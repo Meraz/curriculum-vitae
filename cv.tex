@@ -17,27 +17,29 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
 %% Page sizes
-\setlength{\textwidth}{0.85\paperwidth}
+\setlength{\textwidth}{0.92\paperwidth}
 \setlength{\textheight}{720pt}
-\setlength{\hoffset}{-50pt}
+\setlength{\hoffset}{-70pt}
 \setlength{\voffset}{-50pt}
 
-%FONTS
+%% Change subscection macro
+\renewcommand\thesubsection{}
+
+%% Fonts
 \defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
 %%% modified for Karol Kozioł for ShareLaTeX use
 \setmainfont[
-SmallCapsFont = Fontin-SmallCaps.otf,
-BoldFont = Fontin-Bold.otf,
-ItalicFont = Fontin-Italic.otf
+    SmallCapsFont = Fontin-SmallCaps.otf,
+    BoldFont = Fontin-Bold.otf,
+    ItalicFont = Fontin-Italic.otf
 ]
 {Fontin.otf}
-%%%
 
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
+
 %Tweak a bit the top margin
 %\addtolength{\voffset}{-1.3cm}
 
@@ -68,71 +70,58 @@ ItalicFont = Fontin-Italic.otf
     \includegraphics[scale=0.04]{Grayscale.pdf}
     \end{wrapfigure}
     
-    %\centering{
-    \Huge Rasmus \textsc{Tilljander}
-    %}
+    %\Huge Rasmus \textsc{Tilljander}
+    \Huge Consultant Profile
+    
 	\bigskip
 \par}
-	
 
 %--------------------SECTIONS-----------------------------------
-%Section: Personal Data
-%\subsection{Personal Data}
 
-% \vspace{5 mm}
+%%%
 \begin{tabular}{rl}
     \textsc{} &    \\
-    \textsc{Date of Birth:} &  1991-07-26   \\
-    \textsc{Address:}   & Valhallavägen 4B, 37140 , Karlskrona, Sweden \\
+    \textsc{Year of Birth:} &   1991   \\
+    \textsc{Citizenship:}   &   Swedish \\ 
+%    \textsc{Address:}   & Valhallavägen 4B, 37140 , Karlskrona, Sweden \\
     \textsc{Languages:}  & Swedish (Native), English (Fluent) \\
-    \textsc{Phone:}     & +46 76 00 66 242\\
-    \textsc{email:}     & tilljander.rasmus@gmail.com\\
-    \textsc{Github:}  & \url{https://github.com/Meraz}\\
-    \textsc{linkedin:}  & \url{https://se.linkedin.com/in/rasmus-tilljander-62830052}
+    \textsc{Contact:}   & 07xx-xxxxx \\
+%    \textsc{Phone:}     & +46 76 00 66 242\\
+%    \textsc{email:}     & tilljander.rasmus@gmail.com\\
+%    \textsc{Github:}  & \url{https://github.com/Meraz}\\
+%    \textsc{linkedin:}  & \url{https://se.linkedin.com/in/rasmus-tilljander-62830052}
 \end{tabular}
-%%%
-\section{Technical experience (5-1)}
-\begin{tabular}{rl}
 
+%%%
+\section{Summary}
+Rasmus is a student of knowledge with genuine curiosity regarding the essential workings of the world. With an open mind he adopts the philosophy that one can always improve oneself and that each day contains opportunities that has to be seized. Due to the characteristic of software development it demands a mix of social, logical, and artistic aspects in order to excel
+in. This is why Rasmus has chosen software development as his primary field of interest. As a natural approach he chose an academic road which had a low-level foundation in terms of programming but still explored areas such as visualisation and UX. Which is why C/C++ augmented with higher lever languages is the tools of his choice.
+
+Rasmus excels at planning and organizing his surroundings and because of that he often finds himself in a position to
+coordinate others, something he does well. However, as a personality trait Rasmus believes that a person never can be
+completely perfect, as a results he always aims to improve himself by an iterative process where he reflects on his own
+actions and the actions of others. By combining his skill in organization with self evaluation he tries to identify and
+prevent pitfalls and problems before they occur
+
+%%%
+\section{Competences (5-1)}
+\begin{tabular}{rl}
+Expert Knowledge(5):    & \\
 Advanced Knowledge(4):& C++, Git, Game Development, Windows\\
-Intermediate Knowledge(3):& Linux, Agile Development, SQL, IA-32, Gradle, CMake, Android, Threading,  DirectX, \\& Memory Management, Java, Bash\\
-Basic Knowledge(2):& Unix, C, X86-64, HLSL, GPGPU, Javascript, Unity, Spring Framework, HTML, CSS,\\& Scala \\
-Beginners Knowledge(1):& Python3, PHP, C\#, Groovy, Lua\\
+Intermediate Knowledge(3):& Linux, Agile Development, SQL, IA-32, Gradle, CMake, Android, Threading,  DirectX, \\& Memory Management, Java, Bash, Jenkins\\
+Basic Knowledge(2):& Unix, C, X86-64, HLSL, GPGPU, Javascript, Unity3D, Spring, HTML, CSS,\\& Scala, Lint, Make, Maven, Mockito, LUA, REST,  \\
+Beginners Knowledge(1):& Python3, PHP, C\#, Groovy, Lua, Mockito, Doxygen, Confluence, 3DS Studio Max,\\&
+MQTT \\
 \end{tabular}
 
 %%%
 \section{Work experience}
-\textbf{Contractor, Software Developer} 2016-04-01 - Present \\
-\begin{tabular}{rl}
-Company:& HiQ Karlskrona AB \\
-% Location:& Karlskrona, Sweden \\
-Technologies:&  Linux, Java8, Vaadin, SQL, Spring, REST, Yaml, Cloudify, Android development, Git, Gradle, Groovy\\
-Description:& Full-time employment where I worked as a software developer for Ericsson AB. The project is a\\&
-continuation of the project listed below. A proof of concept which explored a BSS approach for\\&
-providing Internet as a service, it was presented in Berlin at OPNFV in June 2016. I also\\&
-manage the internal IT system at HiQ Karlskrona.
-\end{tabular}\\
+\subsection{Employments}
 
-\textbf{Contractor, Software Developer} 2015-06-01 - 2015-10-31 (5 Months)\\
+\textbf{Consulting Software Engineer} 2016-04-01 - Present \\
 \begin{tabular}{rl}
-Company:& HiQ Karlskrona AB \\
-% Location:& Karlskrona, Sweden \\
-Technologies:&  Java, Vaadin, Spring, Rest, Yaml, Cloudify, Android development, Git, Gradle, Groovy, SQL\\
-Description:& Full-time project based employment where I worked as a software engineer for Ericsson AB.\\&
-The team consisted of five individuals and for the first two months in the project I worked as\\&
-a general developer. For the rest three months I acted as both scrum master as well as a\\&
-developer within the team. We worked on a proof of concept for Ericsson which was\\& 
-presented in Barcelona at Mobile World Congress in February 2016.\\
-\end{tabular}\\
-
-\textbf{Contractor, Software Developer} 2015-09-01 - 2015-12-31 (4 Months) \\
-\begin{tabular}{rl}
-Company:& HiQ Karlskrona AB \\
-Technologies:&  Java, Scala, Vaadin, Gradle, Git, Groovy, GUI, Linux\\
-% Location:& Karlskrona, Sweden \\
-Description:& Part-time employment at 25 \%, besides my studies, where I worked as a software developer for\\&
-Ericsson AB. The goal of the project was  to rebuild an existing GUI for an internal system using\\&
-Vaadin and Scala.
+Empoyer:& HiQ Karlskrona AB\\
+Client:& Ericsson  \\
 \end{tabular}\\
 
 %%%
@@ -141,13 +130,19 @@ Vaadin and Scala.
 \begin{tabular}{rl}
 Degree:&  Master of Engineering Science in Game and Software Engineering\\
 Thesis:& Combining Regional Time Stepping With Two-Scale PCISPH Method\\
-Notable project:& During a 20 week long project in school, where I acted as scrummaster, I were involved in\\&
-building a game engine and  associated game from scratch in C++ using DirectX, PhysX,\\&
-FMod, SDL and Winsock. It can be found here: \url{https://github.com/Meraz/doremi}
+Notable project:& During a 20 week long project, where I acted as scrummaster, we were tasked with building a game\\& engine and associated game from scratch in C++ using DirectX, PhysX, FMod, SDL and Winsock.
 \end{tabular}\\
 
 %%%
-\section{Interests and Activities}
-Cooking, C++, Computer Games, Magic the Gathering, Gamejams, Wargames, Beer
+\section{Interests}
+During his spare time Rasmus enjoys to use the computer for computer games,
+researching and testing new libraries, tools, frameworks, and languages. He also
+appreciates gamejams whenever possible and occasionally spends his time on a wargame.
+A special interest for Rasmus is C++ and keeping up to date with new techniques and
+changes for the language.
+
+Outside the digital world Rasmus enjoy cooking, magic the gathering, craft beer, and
+traveling. He is currently casually looking into the craftsmanship of wood carving as a
+hobby
 
 \end{document}
